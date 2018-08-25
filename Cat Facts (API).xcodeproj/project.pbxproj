@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		6529161A213148FC00CB51C4 /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65291619213148FC00CB51C4 /* UIImage+Gif.swift */; };
+		6529161C213149F500CB51C4 /* placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6529161B213149F500CB51C4 /* placeholder.jpg */; };
+		6529161E21314A5800CB51C4 /* placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6529161D21314A5800CB51C4 /* placeholder.jpg */; };
 		65829AAB2130ECED00156FD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65829AAA2130ECED00156FD5 /* AppDelegate.swift */; };
 		65829AAD2130ECED00156FD5 /* FactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65829AAC2130ECED00156FD5 /* FactViewController.swift */; };
 		65829AB02130ECED00156FD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65829AAE2130ECED00156FD5 /* Main.storyboard */; };
@@ -18,6 +20,8 @@
 
 /* Begin PBXFileReference section */
 		65291619213148FC00CB51C4 /* UIImage+Gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Gif.swift"; sourceTree = "<group>"; };
+		6529161B213149F500CB51C4 /* placeholder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = placeholder.jpg; path = ../../../Downloads/placeholder.jpg; sourceTree = "<group>"; };
+		6529161D21314A5800CB51C4 /* placeholder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = placeholder.jpg; path = ../../../Downloads/placeholder.jpg; sourceTree = "<group>"; };
 		65829AA72130ECED00156FD5 /* Cat Facts (API).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cat Facts (API).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65829AAA2130ECED00156FD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65829AAC2130ECED00156FD5 /* FactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +66,8 @@
 				65829AAC2130ECED00156FD5 /* FactViewController.swift */,
 				65291619213148FC00CB51C4 /* UIImage+Gif.swift */,
 				65829AAE2130ECED00156FD5 /* Main.storyboard */,
+				6529161B213149F500CB51C4 /* placeholder.jpg */,
+				6529161D21314A5800CB51C4 /* placeholder.jpg */,
 				65829ABC2130F3CE00156FD5 /* DogFact.swift */,
 				65829AB12130ECEF00156FD5 /* Assets.xcassets */,
 				65829AB32130ECEF00156FD5 /* LaunchScreen.storyboard */,
@@ -129,7 +135,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				65829AB52130ECEF00156FD5 /* LaunchScreen.storyboard in Resources */,
+				6529161C213149F500CB51C4 /* placeholder.jpg in Resources */,
 				65829AB22130ECEF00156FD5 /* Assets.xcassets in Resources */,
+				6529161E21314A5800CB51C4 /* placeholder.jpg in Resources */,
 				65829AB02130ECED00156FD5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
