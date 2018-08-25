@@ -45,14 +45,14 @@ class FactViewController: UIViewController {
         let url = URL(string: "https://api.thedogapi.com/v1/images/search?format=src&mime_types=image/gif")!
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             
-            if let data = data, let image = UIImage(data: data) {
+            if let data = data, let image = UIImage.gif(data: data) {
                 completion(image)
             } else {
                 completion(nil)
             }
         }
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
-        task.resume()  // 🤷‍♂️
+        task.resume()
         
     }
     
