@@ -10,6 +10,7 @@ import UIKit
 
 class FactViewController: UIViewController {
 
+    @IBOutlet weak var gifImageView: UIImageView!
     @IBOutlet weak var generateButton: UIButton!
     @IBOutlet weak var factLabel: UILabel!
     
@@ -23,7 +24,7 @@ class FactViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func fetchOnlineCatFact(completion: @escaping (DogFact?) -> Void) {
+    func fetchOnlineDogFact(completion: @escaping (DogFact?) -> Void) {
         let url = URL(string: "https://dog-api.kinduff.com/api/facts")!
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             let jsonDecoder = JSONDecoder()
@@ -40,17 +41,42 @@ class FactViewController: UIViewController {
         
     }
     
+    func fetchDogGif (completion: @escaping (UIImage?) -> Void) {
+        let url = URL(string: "https://api.thedogapi.com/v1/images/search?format=src&mime_types=image/gif")!
+        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+            
+            if let data = data, let image = UIImage(data: data) {
+                completion(image)
+            } else {
+                completion(nil)
+            }
+        }
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        task.resume()  // 🤷‍♂️
+        
+    }
     
     @IBAction func getCatFact(_ sender: Any) {
-        fetchOnlineCatFact{ (dogFact) in
+        fetchOnlineDogFact{ (dogFact) in
             if let dogeFact = dogFact {
                 DispatchQueue.main.async {
-                    UIApplication.shared.isNetworkActivityIndicatorVisible = false
+
                     self.factLabel.text = dogeFact.text[0]
                 }
             }
             
         }
+        
+        fetchDogGif { (image) in
+            if let image = image {
+                DispatchQueue.main.async {
+                    UIApplication.shared.isNetworkActivityIndicatorVisible = false
+                    self.gifImageView.image = image
+                }
+            }
+        }
+        
+        
     }
 
 }
