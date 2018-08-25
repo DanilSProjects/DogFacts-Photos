@@ -14,6 +14,9 @@ class FactViewController: UIViewController {
     @IBOutlet weak var generateButton: UIButton!
     @IBOutlet weak var factLabel: UILabel!
     
+    var seenFacts: [String] = []
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -60,8 +63,9 @@ class FactViewController: UIViewController {
         fetchOnlineDogFact{ (dogFact) in
             if let dogeFact = dogFact {
                 DispatchQueue.main.async {
-
                     self.factLabel.text = dogeFact.text[0]
+                    self.seenFacts.append(dogeFact.text[0])
+                    print (self.seenFacts)
                 }
             }
             
@@ -78,6 +82,12 @@ class FactViewController: UIViewController {
         
         
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToHistory" {
+            let destination = segue.destination as! HistoryTableViewController
+            destination.pastFacts = seenFacts
+        }
+    }
 }
 

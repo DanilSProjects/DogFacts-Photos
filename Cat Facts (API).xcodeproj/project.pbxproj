@@ -16,6 +16,8 @@
 		65829AB22130ECEF00156FD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65829AB12130ECEF00156FD5 /* Assets.xcassets */; };
 		65829AB52130ECEF00156FD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65829AB32130ECEF00156FD5 /* LaunchScreen.storyboard */; };
 		65829ABD2130F3CE00156FD5 /* DogFact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65829ABC2130F3CE00156FD5 /* DogFact.swift */; };
+		658FFAAE2131649700459A99 /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658FFAAD2131649700459A99 /* HistoryTableViewController.swift */; };
+		658FFAB0213164BE00459A99 /* FactsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658FFAAF213164BE00459A99 /* FactsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		65829AB42130ECEF00156FD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		65829AB62130ECEF00156FD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65829ABC2130F3CE00156FD5 /* DogFact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogFact.swift; sourceTree = "<group>"; };
+		658FFAAD2131649700459A99 /* HistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
+		658FFAAF213164BE00459A99 /* FactsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 				65829AAC2130ECED00156FD5 /* FactViewController.swift */,
 				65291619213148FC00CB51C4 /* UIImage+Gif.swift */,
 				65829AAE2130ECED00156FD5 /* Main.storyboard */,
+				658FFAAF213164BE00459A99 /* FactsTableViewCell.swift */,
+				658FFAAD2131649700459A99 /* HistoryTableViewController.swift */,
 				6529161B213149F500CB51C4 /* placeholder.jpg */,
 				6529161D21314A5800CB51C4 /* placeholder.jpg */,
 				65829ABC2130F3CE00156FD5 /* DogFact.swift */,
@@ -152,7 +158,9 @@
 				65829AAD2130ECED00156FD5 /* FactViewController.swift in Sources */,
 				65829ABD2130F3CE00156FD5 /* DogFact.swift in Sources */,
 				6529161A213148FC00CB51C4 /* UIImage+Gif.swift in Sources */,
+				658FFAB0213164BE00459A99 /* FactsTableViewCell.swift in Sources */,
 				65829AAB2130ECED00156FD5 /* AppDelegate.swift in Sources */,
+				658FFAAE2131649700459A99 /* HistoryTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
