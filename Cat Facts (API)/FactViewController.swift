@@ -19,6 +19,8 @@ class FactViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let loadedFacts = UserDefaults.standard.array(forKey: "seenFacts")
+        seenFacts = loadedFacts as? [String] ?? [String]()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -66,6 +68,7 @@ class FactViewController: UIViewController {
                     self.factLabel.text = dogeFact.text[0]
                     self.seenFacts.append(dogeFact.text[0])
                     print (self.seenFacts)
+                    UserDefaults.standard.set(self.seenFacts, forKey: "seenFacts")
                 }
             }
             
@@ -98,6 +101,7 @@ class FactViewController: UIViewController {
         if segue.identifier == "backToGen" {
         let source = segue.source as! HistoryTableViewController
         seenFacts = source.pastFacts
+        UserDefaults.standard.set(seenFacts, forKey: "seenFacts")
         }
     }
 }
