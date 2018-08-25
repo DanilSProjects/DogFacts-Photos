@@ -31,7 +31,7 @@
                                 <color key="backgroundColor" red="1" green="0.96232326392184409" blue="0.75490204156615148" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Generate Fact"/>
                                 <connections>
-                                    <action selector="getCatFact:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v5H-UY-Xdf"/>
+                                    <action selector="getCatFact:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5if-Jh-R21"/>
                                 </connections>
                             </button>
                         </subviews>

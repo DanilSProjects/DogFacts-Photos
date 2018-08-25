@@ -23,16 +23,34 @@ class FactViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func getCatFact(_ sender: Any) {
-        let url = URL(string: "https://dog-api.kinduff.com/api/facts")!
+    func fetchOnlineCatFact(completion: @escaping (DogFact?) -> Void) {
+        let url = URL(string: "https://cat-fact.herokuapp.com/facts/random")!
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
-            if  let data = data, let dataString = String(data:data, encoding: .utf8) {
-                print (dataString)
+            let jsonDecoder = JSONDecoder()
+            if  let data = data,
+                let dogFact = try? jsonDecoder.decode(DogFact.self, from: data) {
+               completion(dogFact)
+            } else {
+                completion(nil)
             }
             
         }
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
         task.resume()
         
+    }
+    
+    
+    @IBAction func getCatFact(_ sender: Any) {
+        fetchOnlineCatFact{ (dogFact) in
+            if let dogeFact = dogFact {
+                DispatchQueue.main.async {
+                    UIApplication.shared.isNetworkActivityIndicatorVisible = false
+                    self.factLabel.text = dogeFact.text
+                }
+            }
+            
+        }
     }
 
 }
