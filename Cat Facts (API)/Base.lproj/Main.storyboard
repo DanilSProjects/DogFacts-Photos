@@ -67,7 +67,7 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
         </scene>
-        <!--Facts History-->
+        <!--History-->
         <scene sceneID="6NT-3c-DK2">
             <objects>
                 <tableViewController id="wAz-1G-dLM" customClass="HistoryTableViewController" customModule="Cat_Facts__API_" customModuleProvider="target" sceneMemberID="viewController">
@@ -75,9 +75,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="VI2-c9-i7O">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <items>
+                                <navigationItem title="History" id="jiL-D6-U3j">
+                                    <barButtonItem key="leftBarButtonItem" title="Back" id="lyd-Hv-x7j">
+                                        <connections>
+                                            <action selector="backPressed:" destination="wAz-1G-dLM" id="DWJ-kg-1H5"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </navigationItem>
+                            </items>
+                        </navigationBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FactsCell" id="L0a-m5-BXE" customClass="FactsTableViewCell" customModule="Cat_Facts__API_" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="L0a-m5-BXE" id="YM8-Rq-CJv">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -103,7 +116,7 @@
                             <outlet property="delegate" destination="wAz-1G-dLM" id="2L7-pl-ZvW"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Facts History" id="CNq-nN-Uen"/>
+                    <navigationItem key="navigationItem" title="History" id="x0n-q8-uGV"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z6D-Of-rcW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
