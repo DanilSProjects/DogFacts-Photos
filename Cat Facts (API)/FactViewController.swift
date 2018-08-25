@@ -24,7 +24,7 @@ class FactViewController: UIViewController {
     }
     
     func fetchOnlineCatFact(completion: @escaping (DogFact?) -> Void) {
-        let url = URL(string: "https://cat-fact.herokuapp.com/facts/random")!
+        let url = URL(string: "https://dog-api.kinduff.com/api/facts")!
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             let jsonDecoder = JSONDecoder()
             if  let data = data,
@@ -46,7 +46,7 @@ class FactViewController: UIViewController {
             if let dogeFact = dogFact {
                 DispatchQueue.main.async {
                     UIApplication.shared.isNetworkActivityIndicatorVisible = false
-                    self.factLabel.text = dogeFact.text
+                    self.factLabel.text = dogeFact.text[0]
                 }
             }
             
