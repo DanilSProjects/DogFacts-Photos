@@ -93,5 +93,12 @@ class FactViewController: UIViewController {
             destination.pastFacts = seenFacts
         }
     }
+    
+    @IBAction func unwindToGenerator (with segue: UIStoryboardSegue) {
+        if segue.identifier == "backToGen" {
+        let source = segue.source as! HistoryTableViewController
+        seenFacts = source.pastFacts
+        }
+    }
 }
 
