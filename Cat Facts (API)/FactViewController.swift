@@ -83,6 +83,10 @@ class FactViewController: UIViewController {
         
     }
     
+
+    @IBAction func histButton(_ sender: Any) {
+        performSegue(withIdentifier: "goToHistory", sender: nil)
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToHistory" {
             let destination = segue.destination as! HistoryTableViewController

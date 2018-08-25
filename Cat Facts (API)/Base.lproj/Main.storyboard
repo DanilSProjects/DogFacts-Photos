@@ -48,7 +48,7 @@
                                     <navigationItem title="Fact Generator" id="R5h-Zg-LXa">
                                         <barButtonItem key="rightBarButtonItem" title="History" id="kfU-H8-SsW">
                                             <connections>
-                                                <segue destination="wAz-1G-dLM" kind="show" identifier="goToHistory" id="h4m-cC-JzZ"/>
+                                                <action selector="histButton:" destination="BYZ-38-t0r" id="cnE-lu-fCr"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -62,6 +62,7 @@
                         <outlet property="factLabel" destination="5ye-fd-8Zx" id="QBu-IX-8mC"/>
                         <outlet property="generateButton" destination="cAg-7b-QlM" id="dfZ-uE-dbY"/>
                         <outlet property="gifImageView" destination="cZm-ml-h9a" id="mHp-sn-gfO"/>
+                        <segue destination="wAz-1G-dLM" kind="show" identifier="goToHistory" id="XrH-Y3-wD8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -147,6 +148,6 @@
         <image name="placeholder.jpg" width="1920" height="1200"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="H6h-Zb-JB0"/>
+        <segue reference="XrH-Y3-wD8"/>
     </inferredMetricsTieBreakers>
 </document>
